@@ -47,7 +47,7 @@ body {
 
 .container {
   background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(89,89,89,1) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(37, 37, 37) 100%);
   height: auto;
   width:var(--width-full);
 }
@@ -144,6 +144,7 @@ body {
   border-radius: 5px;
   outline:none;
   color:var(--color-light);
+  
 }
 
 .search-box::placeholder {
@@ -477,7 +478,7 @@ height: 100%;
 
 .end_content {
 width: var(--width-full);
-margin: 20px auto;
+margin: auto;
 background-color: var(--category-pasta);
 height: 150px;
 display: flex;
@@ -485,7 +486,7 @@ grid-template-columns: repeat(7,1fr);
 gap: var(--grid-gap);
 box-sizing: border-box;
 align-items: center;
-border-radius: 5px;
+border-radius: orange footer;
 justify-content: space-evenly;
 }
 
@@ -527,10 +528,12 @@ justify-content: space-evenly;
   width:var(--width-12col);
   margin: 0 auto;
   padding:100px 0 0 0;
+/*   background-color: #111111; */
 }
 
 .recipe_details_left {
   grid-column: 1 / span 6;
+/*   background-color: #111111; */
 }
 
 
@@ -541,7 +544,9 @@ justify-content: space-evenly;
   width:var(--width-12col);
   gap:var(--grid-gap);
   margin: 0 auto;
+/*   background-color: #111111; */
 } 
+
 .recipe-hero-text {
   grid-column: 1 / span 4;
   margin-top:0px;
@@ -552,6 +557,7 @@ justify-content: space-evenly;
 .recipe-hero-text-smallest {
   font-size: 12px;
 }
+
 .recipe-hero-text-medium {
   font-size: 32px;
   text-transform: uppercase;
@@ -576,12 +582,13 @@ justify-content: space-evenly;
   margin: 30px 0 0 0;
   color: var(--background-color-light);
 }
-.recipe_details_ingredient_block_info_three_item  {
-display: flex;
-padding: 10px 0;
+
+.recipe_details_ingredient_block_info_three_item {
+  display: flex;
+  padding: 10px 0;
 }
 .recipe_details_ingredient_block_info_three_item i {
-  color: var(--primary-color);
+  color: #bf5b23;
   padding: 0 10px 0 0;
 }
 /* Part I End */
@@ -589,30 +596,34 @@ padding: 10px 0;
 
 
 /* PART II - input field ingredients start */
-.recipe_details_ingredients{
+.recipe_details_ingredients {
   margin: 0 0 30px 0;
   color: var(--background-color-light);
-  padding: 20px 20px 5px 20px;
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(197,202,203,0) 0%);
+  padding: 20px 20px 5px 20px ;
+  background: rgb(0, 0, 0);
+
 }
-.recipe_details_ingredients h4{
+
+.recipe_details_ingredients h4 { 
   font-size: 24px;
-margin: 0 0 20px 0;
-}
-.recipe_details_ingredient_block_checkboxes{
-  display: flex;
-  flex-wrap:wrap;
   margin: 0 0 20px 0;
 }
-.recipe_details_ingredients label{
+
+.recipe_details_ingredient_block_checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 20px 0;
+}
+
+.recipe_details_ingredients label { 
   width: 45%;
   display: flex;
   margin: 10px 10px 10px 0;
   font-size: 16px;
   align-items: center;
 }
-.recipe_details_ingredients input[type="checkbox"]{
+
+.recipe_details_ingredients input[type="checkbox"] { 
   appearance: none;
   width: 25px;
   height: 25px;
@@ -623,60 +634,61 @@ margin: 0 0 20px 0;
   position: relative;
 }
 
-.recipe_details_ingredients input[type="checkbox"]:checked{
-  background-color: var(--primary-color);
+.recipe_details_ingredients input[type="checkbox"]:checked { 
+  background-color: var(--category-pasta);
   border: none;
 }
-.recipe_details_ingredients input[type="checkbox"]:checked::after {
-content: '';
-display: block;
-width: 5px;
-height: 10px;
-border: solid var(--background-color-light);
-border-width: 0 2px 2px 0;
-transform:translate(-50%,-50%)rotate(45deg);
-position: absolute;
-top: 45%;
-left: 50%;
-}
-/* input field ingredients end - PART II end */
 
-
-
-/* PART III - buttons after input fields */
-.recipe_details_ingredient_block_buttons {
-  display: flex;
-  margin: 30px 0 0 0;
-}
-.recipe_details_ingredient_block_buttons button {
-  background-color: transparent;
-  border:  1px solid var(--background-color-light);
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 12px;
-  text-transform: uppercase;
-margin: 0 10px 0 0;
-}
-.recipe_details_ingredient_block_buttons i{
-text-decoration: none;
-color: var(--background-color-light);
-}
-
-.recipe_details_ingredient_block_buttons a{
-  text-decoration: none;
-  color: var(--background-color-light);
+.recipe_details_ingredients input[type="checkbox"]:checked::after { 
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid var(--background-color-light);
+  border-width: 0 2px 2px 0 ;
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  top: 45%; 
+  left: 50%;
   }
-/* PART III END */
+  /* input field ingredients end - PART II end */
+  
+  
+  /* PART III - buttons after input fields */
+  .recipe_details_ingredient_block_buttons {
+    display: flex;
+    margin: 30px 0 0 0;
+  }
 
+  .recipe_details_ingredient_block_buttons button { 
+    background-color: transparent;
+    border: 1px solid var(--background-color-light);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 10px 0 0;
+  }
 
+  .recipe_details_ingredient_block_buttons button a {
+    text-decoration: none;
+    color: var(--background-color-light);
+  }
 
-/* Right side top */
-.recipe_details_right {
+  .recipe_details_ingredient_block_buttons button i {
+  
+    color: var(--background-color-light);
+  }
+  /* PART III END */
+
+  /* Right side top */
+  .recipe_details_right {
     grid-column: 7 / span 6;
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+/*     background-color: #111111; */
   }
   
   .recipe_details_right_image {
@@ -692,65 +704,62 @@ color: var(--background-color-light);
     height: 100%;
     max-width: fit-content;
     max-height: 500px;
-  
   }
   
   /* filler to fake rest of page */
   
   .filler_block {
-    height: 2000px;
+    height: 800px;
     width: 100%;
+  /*   background-color: #111111; */
    }
 
-header {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  display: flex;
-  justify-content: space-between; /* Align items to opposite ends */
-  padding: 20px;
-  
-}
+   .recipe_text_headline {
+    color: var(--color-white);
+        height: 60px;
+        border-bottom: 1px solid var(--background-color-light);
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: var(--width-12col);
+   }
 
-.instructions, .ingredients {
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+   .recipe-container_block {
+    width: var(--width-12col);
+    margin: 20px auto;
 
-.instructions {
-  margin-left: 20px; /* Optional: Add spacing to the left */
-}
+    color: var(--background-color-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
 
-.ingredients {
-  margin-right: 20px; /* Optional: Add spacing to the right */
-}
+   .Ingredients ol {
+ padding-left: 30px;
+line-height:45px ;
+   }
+
+   .Instructions {
+    width: 100%;
+    line-height: 40px;
+   }
+
+   .Instructions ol {
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+   }
+   
+   .Ingredients li {
+    justify-content: space-between;
+   
+   }
 
 
-.recipe-container {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff8f8; /* Light gray background */
-  padding: 20px;
-}
 
-.ingredients, .instructions {
-  width: 45%;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.ingredients h3, .instructions h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.ingredients ul, .instructions ol {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.ingredients li, .instructions li {
-  margin-bottom: 10px;
-}
