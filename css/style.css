@@ -1463,6 +1463,7 @@ line-height:45px ;
             width: var(--width-12col);
        }
     
+        
        .recipe-container_block {
         width: var(--width-12col);
         margin: 20px auto;
@@ -1630,4 +1631,12 @@ line-height:45px ;
     justify-content: center;
     align-items: center;
    }
-    
+  
+   .about_us_content_block_text {
+    height: fit-content;
+    width: 70%;
+}
+
+.todays_recipes{
+  color: #111111;
+}
