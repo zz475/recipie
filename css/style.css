@@ -1640,3 +1640,36 @@ line-height:45px ;
 .todays_recipes{
   color: #111111;
 }
+
+@media (width < 760px) {
+  
+  :root {
+    --width-12col: 100%; 
+  }
+
+  .todays_recipes_content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+}
+ .in_the_kitchen_content {
+  grid-template-columns: repeat(1, 1fr);
+ }
+
+ .end_content {
+    width: var(--width-full);
+    margin: auto;
+    background-color: var(--category-pasta);
+    height: 150px;
+    display: flex;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--grid-gap);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+
+ .about {
+  grid-template-columns: repeat(1, 1fr);
+ }
